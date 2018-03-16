@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\jefersson\source\repos\avance_proyectolab\avance_proyectolab\main.cpp(39): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\jefersson\source\repos\avance_proyectolab\avance_proyectolab\main.cpp(70): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jefersson\source\repos\avance_proyectolab\avance_proyectolab\main.cpp(156): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  Avance_ProyectoLab.vcxproj -> C:\Users\jefersson\source\repos\Avance_ProyectoLab\Debug\Avance_ProyectoLab.exe
