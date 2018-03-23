@@ -33,8 +33,7 @@ int main() {
 	
 	txt_p->setPosition(400, 0);
 	fuente1->loadFromFile("fuente.ttf");
-	SoundBuffer buffer;
-	Sound sonido;
+	
 	
 	srand(time(0));
 
@@ -61,6 +60,32 @@ int main() {
 	sprite2.setScale(15.f / 726, 15.f / 720);
 	sprite3.setScale(15.f / 726, 15.f / 720);
 	Sprite block[1000];
+
+	//// COMIENZA LA MUSICA
+	sf::Music music;
+
+	if (!music.openFromFile("BGsong.wav"))
+	{
+		cout << "ERROR" << endl;
+	}
+
+	music.play();
+	//// TERMINA LA MUSICA
+
+	// LOS SOUND EFFECTS
+	sf::SoundBuffer buffer;
+
+	if (!buffer.loadFromFile("hit2.wav"))
+	{
+		cout << "ERROR" << endl;
+	}
+
+	sf::Sound sound;
+	sound.setBuffer(buffer);
+	sound.setVolume(75);
+	//sound.play();
+
+	// TERMINA SOUND EFFECTS
 
 	int n = 0;
 	for (int i = 1; i <= 10; i++)
@@ -92,6 +117,7 @@ int main() {
 			{
 				block[i].setPosition(-100, 0); dx = -dx;
 				puntos = puntos + 1;
+				sound.play();
 			}
 
 		y += dy;
@@ -101,6 +127,7 @@ int main() {
 				
 				block[i].setPosition(-100, 0); dy = -dy;
 				puntos = puntos + 1;
+				sound.play();
 			}
 
 		if (x < 0 || x>520) {
